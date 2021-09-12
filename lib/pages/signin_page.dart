@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/utils/routes.dart';
-import 'package:velocity_x/velocity_x.dart';
+
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -32,9 +32,9 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: context.canvasColor,
+      color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32.0,vertical: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 0,vertical: 50.0),
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,
@@ -55,23 +55,34 @@ class _SignInPageState extends State<SignInPage> {
                   height: 20.0,
 
                 ),
-                TextFormField(
-
-                  decoration: InputDecoration(
-                    hintText: " enter phonenumber",
-                    labelText: "PhoneNumber",
-
+                // TextFormField(
+                //
+                //   decoration: InputDecoration(
+                //     hintText: " enter phonenumber",
+                //     labelText: "PhoneNumber",
+                //
+                //   ),
+                //   validator: (value){
+                //     if(value!.isEmpty){
+                //       return "Username cannot be empty";
+                //     }
+                //     return null;
+                //   },
+                //   onChanged: (value){
+                //     name= value;
+                //     setState(() {});
+                //   },
+                // ),
+                Container(
+                  padding: EdgeInsets.all(16.0),
+                  child: TextField(
+                    maxLength: 10,
+                    //controller: mobileNumberController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Enter Your Mobile No."),
                   ),
-                  validator: (value){
-                    if(value!.isEmpty){
-                      return "Username cannot be empty";
-                    }
-                    return null;
-                  },
-                  onChanged: (value){
-                    name= value;
-                    setState(() {});
-                  },
                 ),
                 SizedBox(
                   height: 40.0,

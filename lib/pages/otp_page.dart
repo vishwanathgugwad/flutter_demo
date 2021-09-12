@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/utils/routes.dart';
 import 'package:flutter_demo/utils/themes.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class OtpPage extends StatefulWidget {
   final String phone;
