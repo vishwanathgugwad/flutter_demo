@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ListViewFavoritPage.dart';
+
 
 
 
@@ -16,8 +18,9 @@ class _FavoritesPageState extends State<FavoritesPage> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("page 0"),
+        title: Text("Posts"),
       ),
+      body: ListViewFavoritPage(),
     );
   }
 }
