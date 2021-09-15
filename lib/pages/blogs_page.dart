@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_demo/widgets/drawer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../global.dart';
+import 'account_page.dart';
 
 class BlogsPage extends StatefulWidget {
   const BlogsPage({Key? key}) : super(key: key);
@@ -27,12 +28,32 @@ class _BlogsPageState extends State<BlogsPage> {
       body: Column(
         children: [
           Container(
+
+            decoration: BoxDecoration(
+              boxShadow: [ //background color of box
+                BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 8.0, // soften the shadow
+                  spreadRadius: 12.0, //extend the shadow
+                  offset: Offset(
+                    -10.0, // Move to right 10  horizontally
+                    -5.0, // Move to bottom 10 Vertically
+                  ),
+                )
+              ],
+
+                borderRadius: BorderRadius.circular(16.0),
+
+                //color: Colors.black,
+
+            ),
             child:
             CarouselSlider.builder(
               options: CarouselOptions(
-                height: 250,
+                height: 200,
                  //autoPlay: true,
                 enlargeCenterPage: true,
+                autoPlayCurve: Curves.fastOutSlowIn,
                 autoPlayInterval: Duration(seconds: 2),
                 onPageChanged: (index, reason)=>
                     setState(()=>activeIndex=index),
@@ -51,6 +72,8 @@ class _BlogsPageState extends State<BlogsPage> {
           ),
            SizedBox(height: 20,),
           buildIndicator(),
+
+
         ],
       ),
     );
@@ -58,6 +81,11 @@ class _BlogsPageState extends State<BlogsPage> {
 
 
   }
+  
+  
+  
+
+
   Widget buildImage(String urlImage, int index)=>Container(
     margin: EdgeInsets.symmetric(horizontal: 5),
     child: Image.network(urlImage,
@@ -76,3 +104,5 @@ class _BlogsPageState extends State<BlogsPage> {
       ));
 
 }
+
+
