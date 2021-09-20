@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'ListViewFavoritPage.dart';
+import 'list_fav_page.dart';
+import 'list_post_page.dart';
 
 
 
@@ -20,7 +21,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
       appBar: AppBar(
         title: Text("Posts"),
       ),
-      body: ListViewFavoritPage(),
+      body: ListPostPage(),
     );
   }
 }

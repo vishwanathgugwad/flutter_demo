@@ -39,9 +39,9 @@ appBar: AppBar(
 ),
 body: TabBarView(
   children: [
-    Center(child: Text('Facebook Posts')),
-    Center(child: Text('Twitter Posts')),
-    Center(child: Text('Instagram Posts')),
+    Center(child: Text('Facebook Posts',style: TextStyle(fontSize: 25),)),
+    Center(child: Text('Twitter Posts',style: TextStyle(fontSize: 25))),
+    Center(child: Text('Instagram Posts',style: TextStyle(fontSize: 25))),
   ],
 
 ),

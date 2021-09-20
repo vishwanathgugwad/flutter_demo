@@ -24,8 +24,6 @@ class MyApp extends StatelessWidget {
         MyRoutes.otproute: (context)=>OtpPage(phone: '',),
         MyRoutes.homeRoute: (context)=>MyHomePage(),
 
-
-
       },
 
 

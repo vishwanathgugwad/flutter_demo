@@ -13,6 +13,8 @@ class _ListViewFavoritPageState extends State<ListViewFavoritPage> {
   var titleList = [
 "success",
     "motivation",
+    "motivation",
+    "motivation",
     "hardword",
     "hardword",
     "hardword",
@@ -27,17 +29,20 @@ class _ListViewFavoritPageState extends State<ListViewFavoritPage> {
     "This online DISC assessment is designed to test personality by calculating your personal DISC profile based on your everyday typical behavior.",
     "This online DISC assessment is designed to test personality by calculating your personal DISC profile based on your everyday typical behavior.",
     "This online DISC assessment is designed to test personality by calculating your personal DISC profile based on your everyday typical behavior.",
+    "This online DISC assessment is designed to test personality by calculating your personal DISC profile based on your everyday typical behavior.",
+    "This online DISC assessment is designed to test personality by calculating your personal DISC profile based on your everyday typical behavior.",
   ];
 
   var imageList=[
-
-    '/assets/images/dummy.PNG',
-    '/assets/images/homeimagekar.png',
-    '/assets/images/homeimagekar.png',
-    '/assets/images/homeimagekar.png',
-    '/assets/images/homeimagekar.png',
-    '/assets/images/homeimagekar.png',
-    '/assets/images/homeimagekar.png',
+    'assets/images/embassy.jpg',
+    'assets/images/embassy.jpg',
+    'assets/images/foreign.jpg',
+    'assets/images/foreign.jpg',
+    'assets/images/ganga.jpg',
+    'assets/images/heritage.jpg',
+    'assets/images/indiagate.jpg',
+    'assets/images/namaskarindia.jpg',
+    'assets/images/namaskarindia.jpg',
   ];
   @override
   Widget build(BuildContext context) {

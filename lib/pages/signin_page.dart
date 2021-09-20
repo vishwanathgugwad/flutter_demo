@@ -34,7 +34,7 @@ class _SignInPageState extends State<SignInPage> {
     return Material(
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 0,vertical: 50.0),
+        padding: const EdgeInsets.symmetric(horizontal: 0,vertical: 40.0),
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,

@@ -31,9 +31,11 @@ dependencies:
   google_fonts: ^2.1.0
   pin_code_fields: ^7.2.0
   carousel_slider: ^4.0.0
+  velocity_x: ^1.4.1
 
   #dots_indicator:
   smooth_page_indicator: ^1.0.0+2
+  flutter_image_slideshow: ^0.1.1
 
 dev_dependencies:
   flutter_test:

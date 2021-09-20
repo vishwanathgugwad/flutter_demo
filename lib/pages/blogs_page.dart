@@ -4,7 +4,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_demo/widgets/drawer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../global.dart';
-import 'account_page.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+
+import 'list_fav_page.dart';
 
 class BlogsPage extends StatefulWidget {
   const BlogsPage({Key? key}) : super(key: key);
@@ -28,52 +30,40 @@ class _BlogsPageState extends State<BlogsPage> {
       body: Column(
         children: [
           Container(
-
-            decoration: BoxDecoration(
-              boxShadow: [ //background color of box
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 8.0, // soften the shadow
-                  spreadRadius: 12.0, //extend the shadow
-                  offset: Offset(
-                    -10.0, // Move to right 10  horizontally
-                    -5.0, // Move to bottom 10 Vertically
-                  ),
-                )
+            child:ImageSlideshow(
+              width: double.infinity,
+              height: 250,
+              initialPage: 0,
+              indicatorColor: Colors.blue,
+              indicatorBackgroundColor: Colors.grey,
+              onPageChanged: (value) {
+                debugPrint('Page changed: $value');
+              },
+              autoPlayInterval: 2000,
+              isLoop: true,
+              children: [
+                Image.asset(
+                  'assets/images/image1.jpg',
+                  fit: BoxFit.cover,
+                ),
+                Image.network(
+                  'assets/images/image2.jpg',
+                  fit: BoxFit.cover,
+                ),
+                Image.network(
+                  'assets/images/image3.jpg',
+                  fit: BoxFit.cover,
+                ),
               ],
-
-                borderRadius: BorderRadius.circular(16.0),
-
-                //color: Colors.black,
-
-            ),
-            child:
-            CarouselSlider.builder(
-              options: CarouselOptions(
-                height: 200,
-                 //autoPlay: true,
-                enlargeCenterPage: true,
-                autoPlayCurve: Curves.fastOutSlowIn,
-                autoPlayInterval: Duration(seconds: 2),
-                onPageChanged: (index, reason)=>
-                    setState(()=>activeIndex=index),
-              ),
-
-
-                itemCount: urlImages.length,
-                itemBuilder: (context, index , realIndex){
-              final urlImage = urlImages[index];
-              return
-                buildImage(urlImage,index);
-                },
-
-
-               ),
+            )
           ),
-           SizedBox(height: 20,),
-          buildIndicator(),
-
-
+           Container(height: 20,
+           color: Colors.black,),
+          // SizedBox(height: 20,),
+          Container(
+            height: 500,
+            child:ListViewFavoritPage() ,
+          )
         ],
       ),
     );
@@ -81,28 +71,6 @@ class _BlogsPageState extends State<BlogsPage> {
 
 
   }
-  
-  
-  
 
-
-  Widget buildImage(String urlImage, int index)=>Container(
-    margin: EdgeInsets.symmetric(horizontal: 5),
-    child: Image.network(urlImage,
-      fit: BoxFit.cover
-    ),
-
-  );
-
- Widget buildIndicator()=>AnimatedSmoothIndicator(
-      activeIndex: activeIndex,
-      count: urlImages.length,
-      effect:JumpingDotEffect(
-        activeDotColor: Colors.deepPurple,
-        dotWidth: 10,
-        dotHeight: 10
-      ));
 
 }
-
-

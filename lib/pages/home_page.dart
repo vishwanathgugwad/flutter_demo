@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/pages/account_page.dart';
 import 'package:flutter_demo/pages/favorites_page.dart';
 import 'package:flutter_demo/pages/blogs_page.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
